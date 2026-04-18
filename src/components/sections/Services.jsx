@@ -19,7 +19,7 @@ const Services = () => (
           </div>
           <div className="mil-complex-text justify-content-center mil-mb-15">
             <span className="mil-text-image">
-              <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=250&h=80&fit=crop" alt="team"/>
+              <img src="/img/innovation-accent.png" alt="team"/>
             </span>
             <h2 className="mil-h1 mil-muted mil-center">Unique <span className="mil-thin">Ideas</span></h2>
           </div>

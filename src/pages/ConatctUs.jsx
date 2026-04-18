@@ -58,14 +58,14 @@ const ConatctUs = () => {
     "name": "Sharvix Innovations",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Nagpur",
+      "addressLocality": "Pune",
       "addressRegion": "Maharashtra",
       "addressCountry": "IN"
     },
     "telephone": "+91-9876543210",
-    "email": "info@sharvixinnovations.com",
+    "email": "sharvixinnovations@gmail.com",
     "openingHours": "Mo,Tu,We,Th,Fr 09:00-18:00",
-    "url": "https://sharvix-innovations.netlify.app/contact"
+    "url": "https://sharvixinnovations.com/contact"
   };
 
   return (
@@ -73,7 +73,7 @@ const ConatctUs = () => {
       <SEO 
         title="Contact Us"
         description="Get in touch with Sharvix Innovations. We're ready to help turn your ideas into a powerful digital solution."
-        url="https://sharvix-innovations.netlify.app/contact"
+        url="https://sharvixinnovations.com/contact"
         schema={contactSchema}
       />
       <DarkSection />

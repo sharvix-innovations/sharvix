@@ -13,14 +13,14 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Sharvix Innovations",
-    "url": "https://sharvix-innovations.netlify.app",
-    "logo": "https://sharvix-innovations.netlify.app/logo.png",
+    "url": "https://sharvixinnovations.com",
+    "logo": "https://sharvixinnovations.com/logo.png",
     "description": "We build intelligent, scalable, and user-centric digital products that solve real problems.",
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+91-9876543210",
       "contactType": "Customer Service",
-      "email": "info@sharvixinnovations.com"
+      "email": "sharvixinnovations@gmail.com"
     }
   };
 
@@ -29,7 +29,7 @@ export default function Home() {
       <SEO 
         title="Home"
         description="Sharvix Innovations is an intelligent tech partner helping growing brands build scalable digital products and automation solutions."
-        url="https://sharvix-innovations.netlify.app/"
+        url="https://sharvixinnovations.com/"
         schema={homeSchema}
       />
       <Banner />

@@ -20,24 +20,24 @@ const LocationsSection = () => {
         <div className="row">
           {[
             {
-              city:"Nagpur, India",
-              address:"Nagpur,\nMaharashtra, India",
-              phone:"+91 98765 43210",
-              email:"info@sharvixinnovations.com",
+              city:"Pune, India",
+              address:"Pune,\nMaharashtra, India",
+              phone:"+91 84830 22829",
+              email:"sharvixinnovations@gmail.com",
               hours:"Mon–Fri, 9AM–6PM IST",
             },
             {
               city:"Global Support",
               address:"Remote-first team\nServing clients worldwide",
-              phone:"+91 98765 43210",
+              phone:"+91 84830 22829",
               email:"sharvixinnovations@gmail.com",
               hours:"24/7 Support Available",
             },
             {
               city:"Start a Project",
               address:"Have an idea?\nLet's talk about how\nwe can help you.",
-              phone:"+91 98765 43210",
-              email:"info@sharvixinnovations.com",
+              phone:"+91 84830 22829",
+              email:"sharvixinnovations@gmail.com",
               hours:"Quick response guaranteed",
             },
           ].map((office,i)=>(

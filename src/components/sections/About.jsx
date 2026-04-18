@@ -9,29 +9,18 @@ const About = () => (
               <span className="mil-thin">Sharvix Innovations</span>
             </h2>
             <p className="mil-mb-30">
-              We create intelligent digital products by combining full-stack
-              development, clean UI/UX, and AI-driven automation — built for
-              performance, scalability, and long-term growth.
+              Sharvix Innovations is a freelancing identity built on the foundation of strength, brilliance, and clear thinking inspired by the Sanskrit word Sharv, which reflects power, wisdom, and sharp intellect. With a strong focus on full-stack development, the work spans across modern web and mobile technologies, combining clean UI/UX with solid back-end architecture.
             </p>
 
             <p className="mil-mb-30">
-              <strong style={{color:"#021350"}}>Our Mission:</strong> To empower businesses and startups by building
-              intelligent, scalable, and user-centric digital products that
-              solve real problems and drive sustainable growth through
-              technology, automation, and innovation.
-            </p>
-
-            <p className="mil-mb-60">
-              <strong style={{color:"#021350"}}>Our Vision:</strong> To become a trusted technology and innovation
-              partner for businesses worldwide — known for clarity in thinking,
-              excellence in execution, and future-ready digital solutions.
+              Sharvix Innovations offers end-to-end digital solutions — helping individuals, startups, and growing businesses build scalable, user-friendly, and future-ready products. The stack includes technologies like React, Node.js, Django, Python, PHP, and more always chosen to match the project’s specific needs. Alongside core development, I also integrate automation tools, AI-driven features, and smart workflows to enhance performance, simplify operations, and future-proof the product.
             </p>
           </div>
         </div>
         <div className="col-lg-5">
           <div className="mil-about-photo mil-mb-90">
             <div className="mil-img-frame" style={{paddingBottom:"160%"}}>
-              <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=900&fit=crop" alt="About" />
+              <img src="/img/about-home.png" alt="Sharvix Innovations - Digital Solutions" />
             </div>
           </div>
         </div>

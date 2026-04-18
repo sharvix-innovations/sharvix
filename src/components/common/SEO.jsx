@@ -5,7 +5,7 @@ const SEO = ({ title, description, url, image, type = "website", schema }) => {
   const defaultTitle = "Sharvix Innovations — Intelligent Tech Partner";
   const defaultDescription = "We build intelligent, scalable, and user-centric digital products that solve real problems and drive sustainable growth.";
   
-  const baseUrl = import.meta.env.VITE_APP_URL || "https://sharvix-innovations.netlify.app";
+  const baseUrl = import.meta.env.VITE_APP_URL || "https://sharvixinnovations.com";
   const defaultImage = `${baseUrl}/favicon.png`; 
   const defaultUrl = baseUrl; 
 

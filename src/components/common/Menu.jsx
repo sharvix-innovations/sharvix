@@ -64,16 +64,40 @@ const Menu = ({ isOpen, onClose }) => {
             <div className="mil-menu-right-frame">
               <div className="mil-menu-right">
                 <div className="row">
-                  <div className="col-lg-8 mil-mb-60">
-                    <h6 className="mil-muted mil-mb-30">Projects</h6>
+                  <div className="col-lg-5 mil-mb-60">
+                    <h6 className="mil-muted mil-mb-30">Services</h6>
                     <ul className="mil-menu-list">
+                      <li>
+                        <Link to={allRoutes.services} className="mil-light-soft" onClick={onClose}>Software & Product Development</Link>
+                      </li>
+                      <li>
+                        <Link to={allRoutes.services} className="mil-light-soft" onClick={onClose}>UI/UX & Visual Design</Link>
+                      </li>
+                      <li>
+                        <Link to={allRoutes.services} className="mil-light-soft" onClick={onClose}>View All Services</Link>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="col-lg-7 mil-mb-60">
+                    <h6 className="mil-muted mil-mb-30">Recent Projects</h6>
+                    <ul className="mil-menu-list">
+                      <li>
+                        <Link to={`${allRoutes.projectsdetails}`} className="mil-light-soft" onClick={onClose}>Sharvix Innovations Website</Link>
+                      </li>
                       <li>
                         <Link to={allRoutes.projects} className="mil-light-soft" onClick={onClose}>View All Projects</Link>
                       </li>
                     </ul>
                   </div>
+                </div>
+                <div className="mil-divider mil-mb-60" />
+                <div className="row justify-content-between">
+                  <div className="col-lg-8 mil-mb-60">
+                    <h6 className="mil-muted mil-mb-30">Address</h6>
+                    <p className="mil-light-soft">Vinayak Apartments, Prabhat Road, Lane No. 11, Erandwane, Pune, Maharashtra 411004 <span className="mil-no-wrap">+91 84830 22829</span></p>
+                  </div>
                   <div className="col-lg-4 mil-mb-60">
-                    <h6 className="mil-muted mil-mb-30">Useful links</h6>
+                    <h6 className="mil-muted mil-mb-30">Useful Links</h6>
                     <ul className="mil-menu-list">
                       {usefulLinks.map((l, i) => (
                         <li key={i}>
@@ -81,17 +105,6 @@ const Menu = ({ isOpen, onClose }) => {
                         </li>
                       ))}
                     </ul>
-                  </div>
-                </div>
-                <div className="mil-divider mil-mb-60" />
-                <div className="row justify-content-between">
-                  <div className="col-lg-4 mil-mb-60">
-                    <h6 className="mil-muted mil-mb-30">Canada</h6>
-                    <p className="mil-light-soft">71 South Los Carneros Road, California <span className="mil-no-wrap">+51 174 705 812</span></p>
-                  </div>
-                  <div className="col-lg-4 mil-mb-60">
-                    <h6 className="mil-muted mil-mb-30">Germany</h6>
-                    <p className="mil-light-soft">Leehove 40, 2678 MC De Lier, Netherlands <span className="mil-no-wrap">+31 174 705 811</span></p>
                   </div>
                 </div>
               </div>

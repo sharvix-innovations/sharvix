@@ -23,7 +23,7 @@ const InnerBanner = ({ titleLine1, titleLine1Thin, titleLine2, titleLine2Thin, b
           {titleLine2} <span className="mil-thin">{titleLine2Thin}</span>
         </h1>
         <a href="#service" className="mil-link mil-dark mil-arrow-place mil-down-arrow">
-          <span>About service</span>
+          <span>About Us</span>
           <ArrowSVG />
         </a>
       </div>

@@ -33,7 +33,7 @@ export default function ProjectDetail() {
       <SEO 
         title={`${project.title} - ${project.category}`}
         description={`Read the case study for ${project.title}, a ${project.category} built by Sharvix Innovations.`}
-        url={`https://sharvix-innovations.netlify.app/projects/${projectId}`}
+        url={`https://sharvixinnovations.com/projects/${projectId}`}
         image={project.image}
         type="article"
       />

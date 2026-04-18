@@ -6,36 +6,25 @@ const AboutSection = () => {
           <div className="col-lg-6 col-xl-5">
             <div className="mil-mb-90">
               <h2 className="mil-mb-60">
-                Discover <br/>Our <span className="mil-thin">Studio</span>
+                Discover <br/>Sharvix <span className="mil-thin">Innovations</span>
               </h2>
               <p className="mil-mb-30">
-                We are an intelligent tech partner passionate about transforming businesses through technology. Founded with a vision to build scalable digital products, we've grown into a trusted technology partner for growing brands worldwide.
+                Rooted in the Sanskrit word 'Sharv'—symbolizing power, wisdom, and sharp intellect—Sharvix Innovations operates as a dynamic freelancing entity dedicated to digital excellence. We specialize in robust full-stack development, seamlessly merging intuitive UI/UX design with secure, high-performance back-end architectures to create impactful web and mobile experiences.
               </p>
               <p className="mil-mb-30">
-                Our team of full-stack developers, UI/UX designers, and AI experts work collaboratively to deliver solutions that are not only visually stunning but also technically robust. We believe in building secure, future-ready systems.
+                Our approach centers on delivering comprehensive, end-to-end solutions tailored for startups, entrepreneurs, and scaling enterprises. By leveraging a versatile tech stack that includes React, Node.js, Python, Django, and PHP, we meticulously select the right tools for every unique challenge. Beyond traditional development, we actively integrate AI-driven intelligence, smart workflows, and advanced automation to elevate productivity and ensure your digital products are genuinely future-ready.
               </p>
               <p className="mil-mb-60">
-                From fast-growing startups to enterprise clients, we help organizations navigate digital transformation heavily utilizing modern web architectures and AI-driven automation capabilities.
+                At Sharvix Innovations, the focus goes beyond just writing code; it's about solving real-world problems. Whether architecting a brand-new platform from the ground up or transforming legacy systems into modern powerhouses, we apply meticulous attention to detail and an unwavering commitment to quality to translate bold ideas into intelligent, powerful software that drives tangible value.
               </p>
-              <div className="mil-about-quote">
-                <div className="mil-avatar">
-                  <img
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&h=120&fit=crop&crop=face"
-                    alt="Founder"
-                  />
-                </div>
-                <h6 className="mil-quote">
-                  Building intelligent, user-centric <span className="mil-thin">digital products</span> that solve real business problems.
-                </h6>
-              </div>
             </div>
           </div>
           <div className="col-lg-5">
             <div className="mil-about-photo mil-mb-90">
               <div className="mil-img-frame" style={{paddingBottom:"160%"}}>
                 <img
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=900&fit=crop"
-                  alt="Sharvix team"
+                  src="/img/about-sharvix.png"
+                  alt="Sharvix Innovations digital team"
                 />
               </div>
             </div>

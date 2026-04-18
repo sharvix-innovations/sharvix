@@ -2,13 +2,61 @@ import { useState } from "react";
 import ArrowSVG from "../../common/ArrowSVG";
 
 const ContactSection = () => {
-  const [form, setForm] = useState({name:"", email:"", phone:"", subject:"", message:""});
+  const [form, setForm] = useState({ name: "", email: "", phone: "", subject: "", message: "", services: [] });
   const [sent, setSent] = useState(false);
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleServiceChange = (service) => {
+    setForm(prev => ({
+      ...prev,
+      services: prev.services.includes(service)
+        ? prev.services.filter(s => s !== service)
+        : [...prev.services, service]
+    }));
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSent(true);
-    setTimeout(()=>setSent(false), 4000);
+    setError("");
+    setLoading(true);
+
+    try {
+      const response = await fetch(
+        import.meta.env.VITE_BACKEND_URL 
+          ? `${import.meta.env.VITE_BACKEND_URL}/api/send-email`
+          : 'http://localhost:5000/api/send-email',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            name: form.name,
+            email: form.email,
+            phone: form.phone,
+            subject: form.subject,
+            message: form.message,
+            services: form.services
+          })
+        }
+      );
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send email');
+      }
+
+      setSent(true);
+      setForm({ name: "", email: "", phone: "", subject: "", message: "", services: [] });
+      setTimeout(() => setSent(false), 4000);
+    } catch (err) {
+      console.error("Email error:", err);
+      setError(err.message || "Failed to send message. Please try again or contact us directly.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -29,9 +77,9 @@ const ContactSection = () => {
             {/* contact details */}
             <ul style={{listStyle:"none",padding:0,marginBottom:"60px"}}>
               {[
-                {icon:"📧", label:"Email Us", val:"info@sharvixinnovations.com",   href:"mailto:info@sharvixinnovations.com"},
-                {icon:"📞", label:"Call Us",  val:"+91 98765 43210",               href:"tel:+919876543210"},
-                {icon:"📍", label:"Visit Us", val:"Nagpur, Maharashtra, India",    href:"#."},
+                {icon:"📧", label:"Email Us", val:"sharvixinnovations@gmail.com",   href:"mailto:sharvixinnovations@gmail.com"},
+                {icon:"📞", label:"Call Us",  val:"+91 84830 22829",               href:"tel:+918483022829"},
+                {icon:"📍", label:"Visit Us", val:"Vinayak Apartments, Prabhat Road, Lane No. 11, Erandwane, Pune, Maharashtra 411004",    href:"#."},
                 {icon:"🕐", label:"Working Hours", val:"Mon–Fri, 9AM – 6PM IST",   href:"#."},
               ].map((item,i)=>(
                 <li key={i} style={{
@@ -57,10 +105,10 @@ const ContactSection = () => {
             <h6 className="mil-mb-30">Follow <span style={{fontWeight:100}}>Us</span></h6>
             <ul className="mil-social-icons" style={{gap:"10px"}}>
               {[
-                {ic:"fab fa-linkedin",   href:"#."},
-                {ic:"fab fa-twitter",    href:"#."},
-                {ic:"fab fa-instagram",  href:"#."},
-                {ic:"fab fa-github",     href:"#."},
+                {ic:"fab fa-linkedin",   href:"https://www.linkedin.com/company/sharvix-innovations/"},
+                {ic:"fab fa-instagram",  href:"https://www.instagram.com/sharvixinnovations?igsh=OGlvMXBqdDFlMzJ3"},
+                {ic:"fab fa-whatsapp",   href:"https://wa.me/918483022829"},
+                {ic:"fas fa-envelope",   href:"mailto:sharvixinnovations@gmail.com"},
               ].map((s,i)=>(
                 <li key={i}>
                   <a href={s.href} target="_blank" rel="noreferrer"
@@ -93,6 +141,19 @@ const ContactSection = () => {
               </div>
             ) : (
               <form onSubmit={handleSubmit}>
+                {error && (
+                  <div style={{
+                    padding:"15px",
+                    backgroundColor:"#fee",
+                    border:"1px solid #fcc",
+                    borderRadius:"4px",
+                    marginBottom:"20px",
+                    color:"#c33",
+                    fontSize:"14px"
+                  }}>
+                    {error}
+                  </div>
+                )}
                 <div className="row">
                   <div className="col-md-6">
                     <input
@@ -147,6 +208,8 @@ const ContactSection = () => {
                       <label style={{display:"flex",alignItems:"center",gap:"12px",cursor:"pointer",fontSize:"12px",fontWeight:"500",textTransform:"uppercase",letterSpacing:"2px",color:"rgba(0,0,0,0.5)"}}>
                         <input
                           type="checkbox"
+                          checked={form.services.includes(s)}
+                          onChange={() => handleServiceChange(s)}
                           style={{
                             width:"18px",height:"18px",accentColor:"#0597F2",
                             cursor:"pointer",flexShrink:0,border:"none",
@@ -159,8 +222,8 @@ const ContactSection = () => {
                   ))}
                 </div>
 
-                <button type="submit" className="mil-button">
-                  <span>Send message</span> 
+                <button type="submit" className="mil-button" disabled={loading}>
+                  <span>{loading ? "Sending..." : "Send message"}</span> 
                   <ArrowSVG/>
                 </button>
               </form>

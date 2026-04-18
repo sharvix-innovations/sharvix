@@ -7,10 +7,10 @@ import CTASection from "../components/sections/About/CTASection";
 import SEO from "../components/common/SEO";
 
 const bannerData = {
-  titleLine1: "Building",
-  titleLine1Thin: "Digital",
-  titleLine2: "Excellence",
-  titleLine2Thin: "Since 2015",
+  titleLine1: "Sharvix",
+  titleLine1Thin: "Innovations",
+  titleLine2: "Building Intelligent",
+  titleLine2Thin: "Digital Solutions",
   breadcrumbs: [
     { label: "Homepage", link: "/" },
     { label: "About Us", link: "/about" },
@@ -23,7 +23,7 @@ export default function About() {
       <SEO 
         title="About Us"
         description="Learn more about Sharvix Innovations, our mission, vision, and core values. We don't just build software — we build partnerships."
-        url="https://sharvix-innovations.netlify.app/about"
+        url="https://sharvixinnovations.com/about"
       />
       {/* 1 — Inner Banner */}
       <InnerBanner {...bannerData} />

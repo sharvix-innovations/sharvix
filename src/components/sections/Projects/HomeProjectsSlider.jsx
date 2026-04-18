@@ -78,7 +78,7 @@ const HomeProjectsSlider = () => {
                 <li className="mil-up">{activeProject.category}</li>
                 <li className="mil-up">{activeProject.client}</li>
               </ul>
-              <Link to={`/projects/${activeProject.id}`} className="mil-button mil-arrow-place mil-up mt-12">
+              <Link to={`/projects/${activeProject.id}`} className="mil-button mil-arrow-place mil-up mt-12" style={{ pointerEvents: 'auto' }}>
                 <span>View Project</span>
                 <ArrowSVG />
               </Link>

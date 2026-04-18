@@ -32,7 +32,7 @@ const CallToAction = () => (
           We're <span className="mil-thin">here to help.</span>
         </h2>
         <div className="mil-up">
-          <Link to="/contact" className="mil-button mil-arrow-place">
+          <Link to="/contact" className="mil-button mil-arrow-place" style={{pointerEvents: 'auto'}}>
             <span>Start a Project</span>
             <ArrowSVG />
           </Link>
@@ -50,7 +50,7 @@ export default function Projects() {
       <SEO 
         title="Our Portfolio"
         description="View our latest projects and success stories. We've built highly scalable solutions for brands worldwide."
-        url="https://sharvix-innovations.netlify.app/projects"
+        url="https://sharvixinnovations.com/projects"
       />
       <InnerBanner {...bannerData} />
       <PortfolioSection works={projectsData} />

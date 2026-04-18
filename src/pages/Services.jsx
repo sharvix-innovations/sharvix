@@ -197,11 +197,7 @@ const CallToAction = () => (
         </h2>
 
         <div className="mil-up">
-          <Link
-            to="/contact"
-            className="mil-button mil-arrow-place"
-            style={{ position: "relative", zIndex: 10, pointerEvents: "auto" }}
-          >
+          <Link to="/contact" className="mil-button mil-arrow-place" style={{pointerEvents: 'auto'}}>
             <span>Start a Project</span>
             <ArrowSVG />
           </Link>
@@ -240,7 +236,7 @@ export default function ServicesPage() {
       <SEO 
         title="Our Services"
         description="Explore Sharvix Innovations services: Product Strategy, Software & Product Development, UI/UX Design, AI & Automation, and Digital Marketing."
-        url="https://sharvix-innovations.netlify.app/services"
+        url="https://sharvixinnovations.com/services"
       />
       <DarkSection />
       <CallToAction />

@@ -30,7 +30,7 @@ const OtherServicesSection = ({ services }) => (
                   <li key={j} className="mil-up">{item}</li>
                 ))}
               </ul>
-              <div className="mil-link mil-dark mil-arrow-place mil-up">
+              <div className="mil-link mil-dark mil-arrow-place mil-up mt-8">
                 <span>Read more</span>
                 <ArrowSVG />
               </div>

@@ -380,7 +380,31 @@ const GlobalStyles = () => (
       .mil-tech-tab { padding:8px 18px; font-size:11px; }
     }
 
-    /* Footer */
+    .mil-footer-wrap {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mil-footer-watermark {
+      position: absolute;
+      bottom: -0.18em;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: clamp(160px, 22vw, 400px);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      color: #0a0a0a;
+      white-space: nowrap;
+      pointer-events: none;
+      user-select: none;
+      z-index: 2;
+      line-height: 0.85;
+    }
+    @media(max-width:768px){
+      .mil-footer-watermark { font-size: clamp(70px, 18vw, 160px); bottom: -0.12em; }
+    }
+
     .mil-footer-menu { margin-bottom:120px; }
     .mil-footer-menu ul li { list-style:none; margin-bottom:30px; }
     .mil-footer-menu ul li a { display:block; font-weight:500; font-size:28px; color:rgba(255,255,255,0.9); transition:0.4s; }
@@ -403,9 +427,33 @@ const GlobalStyles = () => (
     @media(max-width:992px){.mil-progress-track{display:none;}}
 
     /* Preloader */
-    .mil-preloader { position:fixed; z-index:999; top:0; left:0; width:100%; height:100vh; background-color:#021350; display:flex; justify-content:center; align-items:center; transition:opacity 0.6s, visibility 0.6s; }
+    .mil-preloader { position:fixed; z-index:9999; top:0; left:0; width:100%; height:100vh; background-color:#021350; display:flex; justify-content:center; align-items:center; transition:opacity 0.8s ease-in-out, visibility 0.8s ease-in-out; }
     .mil-preloader.mil-hidden { opacity:0; visibility:hidden; }
-    .mil-preloader-text { color:#fff; font-size:42px; font-weight:300; display:flex; gap:20px; }
+    
+    .mil-preloader-content { display:flex; flex-direction:column; align-items:center; }
+    
+    .mil-preloader-text { color:#fff; font-size:42px; font-weight:300; display:flex; gap:12px; margin-bottom:30px; letter-spacing: 2px; text-transform: uppercase; }
+    @media(max-width:768px){.mil-preloader-text { font-size: 28px; gap: 8px; margin-bottom: 25px; }}
+    @media(max-width:480px){.mil-preloader-text { font-size: 20px; gap: 6px; margin-bottom: 20px; }}
+    
+    .mil-preloader-text span { opacity: 0; animation: mil-text-fade 0.8s ease forwards; display:inline-block; }
+    .mil-preloader-text span.mil-thin { font-weight: 100; animation-delay: 0.1s; }
+    .mil-preloader-text span.mil-bold { font-weight: 500; color: #0597F2; animation-delay: 0.3s; }
+    
+    @keyframes mil-text-fade { 
+      0% { opacity:0; transform:translateY(15px); } 
+      100% { opacity:1; transform:translateY(0); } 
+    }
+    
+    .mil-preloader-line { width: 220px; height: 2px; background-color: rgba(255,255,255,0.08); position:relative; overflow:hidden; border-radius: 4px; }
+    @media(max-width:768px){.mil-preloader-line { width: 180px; }}
+    .mil-preloader-progress { position:absolute; left:0; top:0; height:100%; width:0; background-color: #0597F2; animation: mil-line-fill 1.5s cubic-bezier(0.77, 0, 0.175, 1) forwards; animation-delay: 0.5s; box-shadow: 0 0 10px rgba(5,151,242,0.5); }
+    
+    @keyframes mil-line-fill { 
+      0% { width:0; } 
+      50% { width: 60%; } 
+      100% { width: 100%; } 
+    }
 
     /* Partners infinite scroll */
     .mil-infinite-scroll { display:flex; overflow:hidden; }
