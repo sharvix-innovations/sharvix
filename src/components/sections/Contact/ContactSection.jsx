@@ -25,7 +25,7 @@ const ContactSection = () => {
       const response = await fetch(
         import.meta.env.VITE_BACKEND_URL 
           ? `${import.meta.env.VITE_BACKEND_URL}/api/send-email`
-          : 'http://localhost:5000/api/send-email',
+          : '/api/send-email',
         {
           method: 'POST',
           headers: {
