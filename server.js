@@ -17,6 +17,9 @@ app.use(cors({
   methods: ['GET', 'POST'],
 }));
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 // Configure Nodemailer with Gmail
 const transporter = nodemailer.createTransport({
   service: 'gmail',
