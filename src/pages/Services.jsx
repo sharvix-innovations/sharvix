@@ -228,8 +228,6 @@ const HiddenElements = () => (
   </div>
 );
 
-import SEO from "../components/common/SEO";
-
 /* ---- Page ---- */
 export default function ServicesPage() {
   const servicesSchema = {
