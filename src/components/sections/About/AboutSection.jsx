@@ -23,8 +23,8 @@ const AboutSection = () => {
             <div className="mil-about-photo mil-mb-90">
               <div className="mil-img-frame" style={{paddingBottom:"160%"}}>
                 <img
-                  src="/img/about-sharvix.png"
-                  alt="Sharvix Innovations digital team"
+                  src="/img/about-page.png"
+                  alt="Sharvix Innovations - Discover Our Story"
                 />
               </div>
             </div>
