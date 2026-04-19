@@ -2,6 +2,7 @@ import ArrowSVG from "../components/common/ArrowSVG";
 import Dodecahedron from "../components/sections/Dodecahedron";
 import { Link } from "react-router-dom";
 import servicesData from "../data/servicesData";
+import SEO from "../components/common/SEO";
 
 /* ---- Lines SVG ---- */
 const LinesSVG = () => (
@@ -231,12 +232,35 @@ import SEO from "../components/common/SEO";
 
 /* ---- Page ---- */
 export default function ServicesPage() {
+  const servicesSchema = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Sharvix Innovations",
+    "url": "https://sharvixinnovations.com/services",
+    "description": "Professional software development and digital transformation services",
+    "areaServed": "Worldwide",
+    "priceRange": "$$",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Services Offered",
+      "itemListElement": servicesData.map(service => ({
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": service.title,
+          "description": service.description
+        }
+      }))
+    }
+  };
+
   return (
     <>
       <SEO 
         title="Our Services"
         description="Explore Sharvix Innovations services: Product Strategy, Software & Product Development, UI/UX Design, AI & Automation, and Digital Marketing."
         url="https://sharvixinnovations.com/services"
+        schema={servicesSchema}
       />
       <DarkSection />
       <CallToAction />

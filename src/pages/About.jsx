@@ -18,12 +18,38 @@ const bannerData = {
 };
 
 export default function About() {
+  const aboutSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Sharvix Innovations",
+    "url": "https://sharvixinnovations.com/about",
+    "logo": "https://sharvixinnovations.com/logo.png",
+    "description": "Sharvix Innovations is a tech company building intelligent, scalable digital products. We partner with brands to create meaningful digital solutions.",
+    "foundingDate": "2020",
+    "areaServed": "Worldwide",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Sales",
+      "telephone": "+91-84830-22829",
+      "email": "sharvixinnovations@gmail.com"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Vinayak Apartments, Prabhat Road, Lane No. 11, Erandwane",
+      "addressLocality": "Pune",
+      "addressRegion": "Maharashtra",
+      "postalCode": "411004",
+      "addressCountry": "IN"
+    }
+  };
+
   return (
     <>
       <SEO 
         title="About Us"
         description="Learn more about Sharvix Innovations, our mission, vision, and core values. We don't just build software — we build partnerships."
         url="https://sharvixinnovations.com/about"
+        schema={aboutSchema}
       />
       {/* 1 — Inner Banner */}
       <InnerBanner {...bannerData} />

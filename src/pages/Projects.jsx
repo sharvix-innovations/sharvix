@@ -45,12 +45,32 @@ const CallToAction = () => (
 import SEO from "../components/common/SEO";
 
 export default function Projects() {
+  const projectsSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Our Portfolio",
+    "description": "Portfolio of digital projects and successful case studies from Sharvix Innovations",
+    "url": "https://sharvixinnovations.com/projects",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Sharvix Innovations",
+      "url": "https://sharvixinnovations.com",
+      "project": projectsData.map(project => ({
+        "@type": "CreativeWork",
+        "name": project.title,
+        "description": project.description,
+        "url": `/projects/${project.id}`
+      }))
+    }
+  };
+
   return (
     <>
       <SEO 
         title="Our Portfolio"
         description="View our latest projects and success stories. We've built highly scalable solutions for brands worldwide."
         url="https://sharvixinnovations.com/projects"
+        schema={projectsSchema}
       />
       <InnerBanner {...bannerData} />
       <PortfolioSection works={projectsData} />
