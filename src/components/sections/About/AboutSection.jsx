@@ -23,8 +23,12 @@ const AboutSection = () => {
             <div className="mil-about-photo mil-mb-90">
               <div className="mil-img-frame" style={{paddingBottom:"160%"}}>
                 <img
-                  src="/img/about-page.png"
+                  src="/img/about-page.webp"
                   alt="Sharvix Innovations - Discover Our Story"
+                  width="600"
+                  height="960"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>

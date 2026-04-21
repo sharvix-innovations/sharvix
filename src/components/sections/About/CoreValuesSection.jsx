@@ -25,7 +25,7 @@ const CoreValuesSection = () => {
             </div>
             <div className="mil-complex-text justify-content-center mil-up mil-mb-15">
               <span className="mil-text-image">
-                <img src="/img/innovation-accent.png" alt="innovation"/>
+                <img src="/img/innovation-accent.webp" alt="innovation" width="250" height="80" loading="lazy" decoding="async"/>
               </span>
               <h2 className="mil-h1 mil-muted mil-center">What <span className="mil-thin">Drives</span></h2>
             </div>

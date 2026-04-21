@@ -1,13 +1,16 @@
+import { lazy } from "react";
 import allRoutes from "./all_routes";
-import Home from "../pages/Home";
-import Contact from "../pages/ConatctUs";
-import Projects from "../pages/Projects";
-import ProjectDetail from "../pages/ProjectDetails";
-import Services from "../pages/Services";
-import ServicesDetails from "../pages/ServicesDetails";
-import About from "../pages/About";
-import PrivacyPolicy from "../pages/PolicyPage";
-import TermsOfService from "../pages/TermsofService";
+
+// Lazy-load all page components for code splitting
+const Home = lazy(() => import("../pages/Home"));
+const Contact = lazy(() => import("../pages/ConatctUs"));
+const Projects = lazy(() => import("../pages/Projects"));
+const ProjectDetail = lazy(() => import("../pages/ProjectDetails"));
+const Services = lazy(() => import("../pages/Services"));
+const ServicesDetails = lazy(() => import("../pages/ServicesDetails"));
+const About = lazy(() => import("../pages/About"));
+const PrivacyPolicy = lazy(() => import("../pages/PolicyPage"));
+const TermsOfService = lazy(() => import("../pages/TermsofService"));
 
 export const publicRoutes = [
   {

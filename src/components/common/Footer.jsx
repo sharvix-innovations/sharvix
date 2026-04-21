@@ -9,12 +9,12 @@ const Footer = () => (
           <div className="row justify-content-between">
             <div className="col-md-4 col-lg-4 mil-mb-60">
               <div className="mil-logo mil-mb-30">
-                <img src="/logo.png" alt="Logo" style={{ height: "42px", filter: "brightness(0) invert(1)" }} />
+                <img src="/logo.png" alt="Sharvix Innovations Logo" width="120" height="42" style={{ height: "42px", filter: "brightness(0) invert(1)" }} loading="lazy" decoding="async" />
               </div>
               <p className="mil-light-soft mil-mb-30">Transforming visions into digital reality with modern, scalable web applications and smart automation.</p>
               <div className="mil-subscribe-form">
                 <input type="text" placeholder="Enter your email" />
-                <button className="mil-button mil-icon-button-sm"><ArrowSVG /></button>
+                <button className="mil-button mil-icon-button-sm" aria-label="Subscribe to newsletter"><ArrowSVG /></button>
               </div>
             </div>
             <div className="col-md-7 col-lg-6">

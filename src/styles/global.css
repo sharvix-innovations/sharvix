@@ -1,6 +1,4 @@
-const GlobalStyles = () => (
-  <style>{`
-    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
     @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css');
 
     * { box-sizing: border-box; padding: 0; margin: 0; }
@@ -46,7 +44,7 @@ const GlobalStyles = () => (
 
     /* Dark BG (invert trick) */
     .mil-dark-bg { position: relative; background: #fff; }
-    // .mil-dark-bg::before { content:''; width:100%; height:100%; position:absolute; pointer-events:none; z-index:2; backdrop-filter: invert(100%); -webkit-backdrop-filter: invert(100%); }
+    /* .mil-dark-bg::before { content:''; width:100%; height:100%; position:absolute; pointer-events:none; z-index:2; backdrop-filter: invert(100%); -webkit-backdrop-filter: invert(100%); } */
     .mil-dark-bg::before { content:''; width:100%; height:100%; position:absolute; pointer-events:none; z-index:2; backdrop-filter: invert(100%) grayscale(100%) brightness(150%); -webkit-backdrop-filter: invert(100%) }
     .mil-dark-bg .mi-invert-fix { height:100%; position:relative; pointer-events:none; z-index:3; }
     .mil-dark-bg .mi-invert-fix .container-inner { pointer-events:none; }
@@ -765,7 +763,3 @@ const GlobalStyles = () => (
       60%{transform:skew(-3deg);} 70%{transform:skew(-1deg);} 80%{transform:skew(-1deg);}
       90%{transform:skew(4deg);} 100%{transform:skew(-3deg);}
     }
-  `}</style>
-);
-
-export default GlobalStyles;

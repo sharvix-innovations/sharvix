@@ -29,7 +29,9 @@ const HomeProjectsSlider = () => {
             <div className="mil-slider-nav mil-light" style={{ position: 'relative', zIndex: 10, display: 'flex', gap: '45px' }}>
               <div 
                 className="mil-slider-arrow mil-prev" 
-                onClick={prevSlide} 
+                onClick={prevSlide}
+                role="button"
+                aria-label="Previous project"
                 style={{ 
                   cursor: 'pointer', 
                   backgroundColor: '#ffffffff', 
@@ -48,7 +50,9 @@ const HomeProjectsSlider = () => {
               </div>
               <div 
                 className="mil-slider-arrow" 
-                onClick={nextSlide} 
+                onClick={nextSlide}
+                role="button"
+                aria-label="Next project"
                 style={{ 
                   cursor: 'pointer', 
                   backgroundColor: '#ffffffff', 

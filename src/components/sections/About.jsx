@@ -13,14 +13,21 @@ const About = () => (
             </p>
 
             <p className="mil-mb-30">
-              Sharvix Innovations offers end-to-end digital solutions — helping individuals, startups, and growing businesses build scalable, user-friendly, and future-ready products. The stack includes technologies like React, Node.js, Django, Python, PHP, and more always chosen to match the project’s specific needs. Alongside core development, I also integrate automation tools, AI-driven features, and smart workflows to enhance performance, simplify operations, and future-proof the product.
+              Sharvix Innovations offers end-to-end digital solutions — helping individuals, startups, and growing businesses build scalable, user-friendly, and future-ready products. The stack includes technologies like React, Node.js, Django, Python, PHP, and more always chosen to match the project's specific needs. Alongside core development, I also integrate automation tools, AI-driven features, and smart workflows to enhance performance, simplify operations, and future-proof the product.
             </p>
           </div>
         </div>
         <div className="col-lg-5">
           <div className="mil-about-photo mil-mb-90">
-            <div className="mil-img-frame" style={{paddingBottom:"160%"}}>
-              <img src="/img/about-home.png" alt="Sharvix Innovations - Digital Solutions" />
+              <div className="mil-img-frame" style={{paddingBottom:"160%"}}>
+                <img 
+                  src="/img/about-home.webp" 
+                  alt="Sharvix Innovations - Digital Solutions"
+                  width="600" 
+                  height="960" 
+                  loading="lazy"
+                  decoding="async"
+                />
             </div>
           </div>
         </div>

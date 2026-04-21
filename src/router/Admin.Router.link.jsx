@@ -1,4 +1,6 @@
-import AdminDashboard from "../admin/pages/Dashboard";
+import { lazy } from "react";
+
+const AdminDashboard = lazy(() => import("../admin/pages/Dashboard"));
 
 export const adminRoutes = [
   {

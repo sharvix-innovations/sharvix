@@ -22,9 +22,9 @@ const Menu = ({ isOpen, onClose }) => {
     <div className={`mil-menu-frame${isOpen ? " mil-active" : ""}`}>
       <div className="mil-frame-top">
         <Link to={allRoutes.home} className="mil-logo" onClick={onClose}>
-          <img src="/logo.png" alt="Logo" style={{ height: "42px", filter: "brightness(0) invert(1)" }} />
+          <img src="/logo.png" alt="Sharvix Innovations Logo" width="120" height="42" style={{ height: "42px", filter: "brightness(0) invert(1)" }} loading="lazy" decoding="async" />
         </Link>
-        <div className={`mil-menu-btn mil-active`} onClick={onClose}>
+        <div className={`mil-menu-btn mil-active`} onClick={onClose} role="button" aria-label="Close menu" tabIndex={0} onKeyDown={e => (e.key === 'Enter' || e.key === ' ') && onClose()}>
           <span />
         </div>
       </div>

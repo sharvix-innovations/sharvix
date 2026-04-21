@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
-import GlobalStyles from "../../styles/GlobalStyles";
+import "../../styles/global.css";
 import Preloader from "../common/Preloader";
 import ProgressBar from "../common/ProgressBar";
 import Menu from "../common/Menu";
@@ -18,9 +18,14 @@ const Layout = () => {
     window.scrollTo(0, 0);
   }, [pathname]);
 
-  // Hide preloader after initial load
+  // Hide preloader after fonts are ready (or max 800ms)
   useEffect(() => {
-    const timer = setTimeout(() => setPreloaderHidden(true), 1800);
+    const hide = () => setPreloaderHidden(true);
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(hide);
+    }
+    // Max wait 800ms regardless
+    const timer = setTimeout(hide, 800);
     return () => clearTimeout(timer);
   }, []);
 
@@ -31,17 +36,12 @@ const Layout = () => {
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
       setScrollProgress(docHeight > 0 ? (scrollTop / docHeight) * 100 : 0);
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <>
-      <GlobalStyles />
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"
-      />
       <div className="mil-wrapper">
         <Preloader hidden={preloaderHidden} />
         <ProgressBar progress={scrollProgress} />

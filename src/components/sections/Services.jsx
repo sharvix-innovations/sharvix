@@ -19,7 +19,7 @@ const Services = () => (
           </div>
           <div className="mil-complex-text justify-content-center mil-mb-15">
             <span className="mil-text-image">
-              <img src="/img/innovation-accent.png" alt="team"/>
+              <img src="/img/innovation-accent.webp" alt="Sharvix team collaborating" width="250" height="80" loading="lazy" decoding="async"/>
             </span>
             <h2 className="mil-h1 mil-muted mil-center">Unique <span className="mil-thin">Ideas</span></h2>
           </div>

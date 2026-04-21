@@ -6,9 +6,9 @@ const Frame = ({ menuOpen, toggleMenu }) => (
   <div className="mil-frame">
     <div className="mil-frame-top">
       <Link to={allRoutes.home} className="mil-logo">
-        <img src="/logo.png" alt="Logo" style={{ height: "42px" }} />
+        <img src="/logo.png" alt="Sharvix Innovations Logo" width="120" height="42" style={{ height: "42px" }} fetchpriority="high" />
       </Link>
-      <div className={`mil-menu-btn ${menuOpen ? 'mil-active' : ''}`} onClick={toggleMenu}><span /></div>
+      <div className={`mil-menu-btn ${menuOpen ? 'mil-active' : ''}`} onClick={toggleMenu} role="button" aria-label={menuOpen ? 'Close menu' : 'Open menu'} tabIndex={0} onKeyDown={e => (e.key === 'Enter' || e.key === ' ') && toggleMenu()}><span /></div>
     </div>
     <div className="mil-frame-bottom">
       <div className="mil-current-page">Sharvix Innovations</div>
