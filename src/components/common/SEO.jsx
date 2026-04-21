@@ -6,7 +6,7 @@ const SEO = ({ title, description, url, image, type = "website", schema }) => {
   const defaultDescription = "We build intelligent, scalable, and user-centric digital products that solve real problems and drive sustainable growth.";
   
   const baseUrl = import.meta.env.VITE_APP_URL || "https://sharvixinnovations.com";
-  const defaultImage = `${baseUrl}/favicon.png`; 
+  const defaultImage = `${baseUrl}/logo.png`; 
   const defaultUrl = baseUrl; 
 
   const seoTitle = title ? `${title} | ${siteName}` : defaultTitle;
