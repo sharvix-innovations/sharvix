@@ -41,14 +41,14 @@
   <url>
     <loc>https://sharvixinnovations.com/privacy-policy</loc>
     <lastmod>2026-04-19</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>never</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://sharvixinnovations.com/terms-of-Service</loc>
+    <loc>https://sharvixinnovations.com/terms-of-service</loc>
     <lastmod>2026-04-19</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>never</changefreq>
     <priority>0.7</priority>
   </url>
 
